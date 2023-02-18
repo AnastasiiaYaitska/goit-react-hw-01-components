@@ -17,15 +17,15 @@ export const Profile = ( {username,tag,location,avatar,stats} ) => {
   <Stats>
     <StatsItem>
       <Label>Followers</Label>
-      <Quantity class="quantity">{ stats.followers}</Quantity>
+      <Quantity >{ stats.followers}</Quantity>
     </StatsItem>
     <StatsItem>
       <Label>Views</Label>
-      <Quantity class="quantity">{stats.views}</Quantity>
+      <Quantity>{stats.views}</Quantity>
     </StatsItem>
     <StatsItem>
       <Label>Likes</Label>
-      <Quantity class="quantity">{stats.likes}</Quantity>
+      <Quantity >{stats.likes}</Quantity>
     </StatsItem>
   </Stats>
 </ProfileCard>

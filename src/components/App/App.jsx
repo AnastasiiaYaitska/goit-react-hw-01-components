@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
-import { Profile } from 'components/Profile/Profile';
 import user from 'user.json';
+import data from 'data.json';
+import { Profile } from 'components/Profile/Profile';
+import { Statistics } from 'components/Statistics/Statistics';
+
 import { Container } from './App.styled';
 
 export const App = () => {
@@ -13,11 +16,12 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
+      <Statistics title="Upload stats" stats={data}/>
     </Container>
   );
 };
 
-Profile.PropTypes = {
+Profile.propTypes = {
   username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
@@ -30,4 +34,7 @@ Profile.PropTypes = {
   }).isRequired,
 };
 
-
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
