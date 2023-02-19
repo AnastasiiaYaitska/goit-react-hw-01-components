@@ -4,7 +4,9 @@ export const FriendItem = styled.li`
 box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 border-radius: 10px;
 display: flex;
-padding: 20px 25px;
+padding-left: 20px;
+padding-top: 15px;
+padding-bottom: 15px;
 gap: 20px;
 max-width: 30%;
 align-items: center;

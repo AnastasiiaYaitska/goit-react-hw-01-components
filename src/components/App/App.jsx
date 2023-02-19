@@ -1,12 +1,19 @@
 import PropTypes from 'prop-types';
-import user from 'user.json';
-import data from 'data.json';
-import friends from 'friends.json';
-import { Profile } from 'components/Profile/Profile';
-import { Statistics } from 'components/Statistics/Statistics';
-import { FriendList } from 'components/FriendList/FriendList';
-
 import { Container } from './App.styled';
+
+import { Profile } from 'components/Profile/Profile';
+import user from 'user.json';
+
+import { Statistics } from 'components/Statistics/Statistics';
+import data from 'data.json';
+
+import { FriendList } from 'components/FriendList/FriendList';
+import friends from 'friends.json';
+
+import { TransactionHistory } from 'components/TransactionHistory/TransactionHistory';
+import transactions from 'transactions.json';
+
+
 
 export const App = () => {
   return (
@@ -20,6 +27,7 @@ export const App = () => {
       />
       <Statistics title="Upload stats" stats={data} />
       <FriendList friends={friends} />
+      <TransactionHistory transactions={transactions} />
     </Container>
   );
 };
@@ -44,4 +52,9 @@ Statistics.propTypes = {
 
 FriendList.propTypes = {
   friends: PropTypes.arrayOf(PropTypes.object).isRequired,
-}
+};
+
+TransactionHistory.propTypes = {
+  transactions: PropTypes.arrayOf(PropTypes.object,).isRequired,
+};
+
