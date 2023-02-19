@@ -1,7 +1,35 @@
 import styled from "@emotion/styled";
 
 export const FriendItem = styled.li`
-box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 border-radius: 10px;
 display: flex;
+padding: 20px 25px;
+gap: 20px;
+max-width: 30%;
+align-items: center;
+&:not(:last-child){
+    margin-bottom: 20px;
+}
+`;
+
+export const Status = styled.span`
+height: 25px;
+width: 25px;
+border-radius: 50%;
+background-color: ${(prop) => {
+    return prop.isOnline === true ? 'green' : 'red';
+}};
+`;
+
+export const Avatar = styled.img`
+   display: block;
+    max-width: 100%;
+    height: auto;
+`;
+
+export const UserName = styled.p`
+ font-size: 30px;
+ font-weight: 600;
+
 `;
