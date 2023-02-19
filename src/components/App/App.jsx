@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import user from 'user.json';
 import data from 'data.json';
+import friends from 'friends.json';
 import { Profile } from 'components/Profile/Profile';
 import { Statistics } from 'components/Statistics/Statistics';
+import { FriendList } from 'components/FriendList/FriendList';
 
 import { Container } from './App.styled';
 
@@ -16,7 +18,8 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-      <Statistics title="Upload stats" stats={data}/>
+      <Statistics title="Upload stats" stats={data} />
+      <FriendList friends={friends} />
     </Container>
   );
 };
@@ -38,3 +41,7 @@ Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(PropTypes.object).isRequired,
+}
